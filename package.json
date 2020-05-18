@@ -6,37 +6,49 @@
 	"engines": {
 		"vscode": "^1.45.0"
 	},
+
+	"scripts": {
+		"patch": "vsce publish patch",
+		"icons": "imagemin icons/* --out-dir=icons",
+		"test": "exit 0"
+	},
 	"categories": [
-		"Other"
+		"Other",
+		"Themes"
 	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld"
-	],
-	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
+		"iconThemes": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"id": "sr-file-icons",
+				"label": "SR File Icons",
+				"path": "./icons.json"
 			}
 		]
 	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile",
-		"test": "node ./out/test/runTest.js"
+	"icon": "images/vscode-simpler-icons_icon.png",
+	"galleryBanner": {
+		"color": "#e0e0e0",
+		"theme": "light"
 	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.6",
-		"@types/node": "^10.12.21",
-		"@types/vscode": "^1.45.0",
-		"glob": "^7.1.4",
-		"mocha": "^6.1.4",
-		"typescript": "^3.3.1",
-		"tslint": "^5.12.1",
-		"vscode-test": "^1.2.0"
-	}
+	"keywords": [
+		"angular",
+		"icons",
+		"theme",
+		"icon-theme",
+		"customization"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lae0901/sr_file_icon_theme.git"
+	},
+	"author": {
+		"email": "stephenrichter@gmail.com",
+		"name": "Stephen Richter",
+		"url": ""
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/lae0901/sr_file_icon_theme/issues"
+	},
+	"homepage": "https://github.com/lae0901/sr_file_icon_theme#readme"
 }
